@@ -1,0 +1,26 @@
+<html>
+
+<head>
+<title>ondblclick event example</title>
+
+<script type="text/javascript">
+
+function initElement() {
+ var p = document.getElementById("foo");
+ // Attention : showAlert(); ou showAlert(param); ne fonctionneront pas ici,
+ // il doit s'agir d'une référence à un nom de fonction, pas un appel de fonction.
+ p.ondblclick = RedirectionJavascript;
+};
+
+function RedirectionJavascript(){
+        document.location.href="http://google.com";
+}
+</script>
+
+</head>
+
+<body onload="initElement()";>
+<span id="foo">Mon élément</span>
+<p>Double-cliquez sur l'élément ci-dessus.</p>
+</body>
+</html>
